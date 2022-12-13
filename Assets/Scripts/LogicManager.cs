@@ -8,7 +8,7 @@ public class LogicManager : MonoBehaviour
 {
     [SerializeField] int playerScore = 0;
     [SerializeField] Text scoreText;
-    [SerializeField] GameObject gameOverScreen;
+    public GameObject gameOverScreen;
 
     public void addScore(int scoreToAdd)
     {

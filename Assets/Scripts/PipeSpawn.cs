@@ -6,7 +6,7 @@ public class PipeSpawn : MonoBehaviour
 {
     [SerializeField] GameObject pipe;
     [SerializeField] float spawnRate = 2;
-    [SerializeField] float heightOffset = 10; 
+    [SerializeField] float heightOffset = 5; 
     private float timer = 0;
 
     void Start()
