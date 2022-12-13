@@ -7,7 +7,7 @@ public class Bird : MonoBehaviour
     [SerializeField] Rigidbody2D myRigidbody;
     [SerializeField] float jumpVelocity = 10;
     [SerializeField] LogicManager logic;
-    [SerializeField] bool birdIsAlive = true;
+    public bool birdIsAlive = true;
 
     void Start()
     {
@@ -27,4 +27,11 @@ public class Bird : MonoBehaviour
         birdIsAlive = false;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == 6) {
+            logic.gameOver();
+            birdIsAlive = false;
+        }
+    }
 }

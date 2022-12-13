@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PipeMiddle : MonoBehaviour
 {
-    public LogicManager logic;
+    [SerializeField] LogicManager logic;
 
     void Start()
     {
