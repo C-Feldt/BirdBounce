@@ -16,7 +16,12 @@ public class Pipes : MonoBehaviour
 
     void Update()
     {
-        moveSpeed = 10 + (logic.getScore() / 3);
+        if(moveSpeed < 30) {
+            moveSpeed = 10 + (logic.getScore() / 3);
+        } else {
+            moveSpeed = 30;
+        }
+        
         transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
 
         if(transform.position.x < deadZone) {
